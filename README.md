@@ -1,7 +1,7 @@
 # CS:GO Cleaner
 Программа удаляет лишние файлы игры.
 
-За основу взята очистка от: vk.com/boostfixteam
+За основу взята очистка от: vk.com/boostfixteam и youtube.com/c/MadinaStreams/
 ## Как использовать
 ###### Первый запуск
 **1.Нужно ввести путь к папке CS:GO**
