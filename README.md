@@ -5,6 +5,8 @@
 The program removes unnecessary game files.
 
 Based on cleaning from: vk.com/boostfixteam and youtube.com/c/MadinaStreams/
+
+[Download 👈](https://github.com/stanico/csgocleaner/releases/)
 ## How to use
 ###### First start
 **1. Choose language**
