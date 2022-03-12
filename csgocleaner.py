@@ -166,7 +166,7 @@ def clean():
     restore_file("\\csgo\\scripts\\", "instructor_textures.txt")
     restore_file("\\csgo\\scripts\\", "inventory_structure.txt")
     restore_file("\\csgo\\scripts\\items\\", "items_game.txt")
-    restore_file("\\csgo\\bin\\", "client_panorama.dll")
+    remove_file("\\csgo\\bin\\", "client_panorama.dll")
     remove_file("\\csgo\\", "modelsounds.cache")
     remove_file("\\csgo\\", "bspconvar_whitelist.txt")
     remove_file("\\csgo\\", "gamemodes_server.txt.example")
