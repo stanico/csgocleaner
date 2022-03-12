@@ -196,7 +196,6 @@ def clean():
     remove_tree("\\csgo\\maps\\graphs")
     remove_tree("\\csgo\\maps\\workshop")
     remove_byext(".txt", "\\csgo\\maps")
-    remove_byext(".nav", "\\csgo\\maps")
     remove_byext(".jpg", "\\csgo\\maps")
     clear_files(".cfg", "\\csgo\\maps\\cfg")
     if videos == "1":
@@ -212,6 +211,7 @@ def clean():
         remove_tree("\\platform\\steam")
         remove_tree("\\platform\\vgui")
     if bots == "1":
+        remove_byext(".nav", "\\csgo\\maps")
         remove_file("\\csgo\\", "botchatter.db")
         remove_file("\\csgo\\", "botprofile.db")
         remove_file("\\csgo\\", "botprofilecoop.db")
