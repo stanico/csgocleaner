@@ -1,4 +1,4 @@
-# CSGO CLEANER v0.2 11/03/2022
+# CSGO CLEANER v0.3 12/03/2022
 # credits: stanico#1206
 # tg: @Stanico
 # github.com/stanico/csgocleaner/
@@ -76,6 +76,21 @@ def remove_byext(ext, path):
             os.remove(os.path.join(csgo_path + path, item))
 
 
+def clear_files(ext, path):
+    list = os.listdir(os.path.join(csgo_path + path))
+    if os.path.exists(os.path.join(main_path + path)):
+        pass
+    else:
+        os.makedirs(os.path.join(main_path + path))
+    for item in list:
+        if item.endswith(ext):
+            shutil.copy(os.path.join(csgo_path + path, item), os.path.join(main_path + path))
+            os.remove(os.path.join(csgo_path + path, item))
+            with open(csgo_path + path+"\\"+item, "w") as file:
+                file.write("")
+                file.close()
+
+
 def clean():
     global main_path
     if bots == "1" or stickers == "1" or videos == "1" or font == "1" or servers == "2":
@@ -105,6 +120,10 @@ def clean():
         main()
     main_path = main_path + "\\restorepoint"
     # File Source: vk.com/boostfixteam
+    remove_byext(".mdmp", "\\")
+    remove_file("\\", "chrome.pak")
+    remove_tree("\\directx_installer")
+    remove_tree("\\EmplySteamDepot")
     # bin
     remove_tree("\\bin\\locales")
     remove_tree("\\bin\\map_publish")
@@ -143,9 +162,12 @@ def clean():
     else:
         restore_file("\\csgo\\resource\\", "vmtcache.txt")
     remove_tree("\\csgo\\scripts")
+    remove_tree("\\csgo\\cache")
     restore_file("\\csgo\\scripts\\", "instructor_textures.txt")
     restore_file("\\csgo\\scripts\\", "inventory_structure.txt")
     restore_file("\\csgo\\scripts\\items\\", "items_game.txt")
+    restore_file("\\csgo\\bin\\", "client_panorama.dll")
+    remove_file("\\csgo\\", "modelsounds.cache")
     remove_file("\\csgo\\", "bspconvar_whitelist.txt")
     remove_file("\\csgo\\", "gamemodes_server.txt.example")
     remove_file("\\csgo\\", "demo_polish_settings.cfg")
@@ -157,6 +179,9 @@ def clean():
     remove_file("\\csgo\\", "maplist.txt")
     remove_file("\\csgo\\", "medalsconfig.txt")
     remove_file("\\csgo\\", "motd.txt")
+    remove_file("\\csgo\\", "mapcycle.txt")
+    remove_file("\\csgo\\", "missioncycle.txt")
+    remove_file("\\csgo\\", "steam_appid.txt")
     remove_file("\\csgo\\", "navplace.db")
     remove_file("\\csgo\\", "pure_server_whitelist.txt")
     remove_file("\\csgo\\", "radial_quickinventory.txt")
@@ -167,9 +192,13 @@ def clean():
     remove_file("\\csgo\\", "unusedcontent.cfg")
     remove_file("\\csgo\\", "whitelist.cfg")
     remove_file("\\csgo\\", "whitelist_beta.cfg")
+    remove_tree("\\csgo\\maps\\soundcache")
+    remove_tree("\\csgo\\maps\\graphs")
+    remove_tree("\\csgo\\maps\\workshop")
     remove_byext(".txt", "\\csgo\\maps")
     remove_byext(".nav", "\\csgo\\maps")
     remove_byext(".jpg", "\\csgo\\maps")
+    clear_files(".cfg", "\\csgo\\maps\\cfg")
     if videos == "1":
         remove_tree("\\csgo\\panorama\\fonts")
     if font == '1':
@@ -179,6 +208,7 @@ def clean():
         remove_tree("\\platform\\materials")
         remove_tree("\\platform\\resource")
         remove_tree("\\platform\\scripts")
+        remove_tree("\\platform\\servers")
         remove_tree("\\platform\\steam")
         remove_tree("\\platform\\vgui")
     if bots == "1":
@@ -216,7 +246,7 @@ def intro():
     print('  / ____/ ___// ____/ __ \   / ____/ /   / ____/   |  / | / / ____/ __ \ ')
     print(' / /    \__ \/ / __/ / / /  / /   / /   / __/ / /| | /  |/ / __/ / /_/ / ')
     print('/ /___ ___/ / /_/ / /_/ /  / /___/ /___/ /___/ ___ |/ /|  / /___/ _, _/ ')
-    print('\____//____/\____/\____/   \____/_____/_____/_/  |_/_/ |_/v0.2_/_/ |_| ')
+    print('\____//____/\____/\____/   \____/_____/_____/_/  |_/_/ |_/v0.3_/_/ |_| ')
     print('Credits: stanico#1206')
     print('')
 
@@ -275,9 +305,9 @@ def main():
         print('Введите путь к папке CS:GO')
         print('Пример: C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive')
         csgo_path = input()
-        if os.path.exists(csgo_path + "\csgo.exe"):
+        if os.path.exists(csgo_path + "\\csgo.exe"):
             os.makedirs(main_path)
-            with open(main_path + '\path.txt', 'w') as file:
+            with open(main_path + '\\path.txt', 'w') as file:
                 file.write(csgo_path)
                 file.close()
             clear()
