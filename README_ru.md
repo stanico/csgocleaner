@@ -4,17 +4,21 @@
 За основу взята очистка от: vk.com/boostfixteam и youtube.com/c/MadinaStreams/
 ## Как использовать
 ###### Первый запуск
-**1.Нужно ввести путь к папке CS:GO**
+**1. Выберите язык**
+
+![image](https://user-images.githubusercontent.com/49199507/158034996-42ea4f89-9159-46b5-a1ea-19321aa35cd5.png)
+
+**2.Нужно ввести путь к папке CS:GO**
  
 ![image](https://user-images.githubusercontent.com/49199507/157939673-3e078dac-be37-44bb-a2da-ff926da0d3ad.png)
 
 
-**2. Выбираем "Настройка"**
+**3. Выбираем "Настройка"**
 
 ![image](https://user-images.githubusercontent.com/49199507/157939920-608a33a8-7a75-4e49-9a33-60d146bf024f.png)
 
 
-**3. Отвечаем на вопросы**
+**4. Отвечаем на вопросы**
 
 ![image](https://user-images.githubusercontent.com/49199507/157940255-60407146-bbdf-467a-a427-63e30a9f3649.png)
 ![image](https://user-images.githubusercontent.com/49199507/157940437-d90d21c7-ea56-42da-96f5-37280bf47a2d.png)
@@ -22,7 +26,7 @@
 ![image](https://user-images.githubusercontent.com/49199507/157940822-fea38eeb-a4b2-4828-90a5-51d80aeba939.png)
 ![image](https://user-images.githubusercontent.com/49199507/157941016-dc138633-c0d1-4512-a165-eb7984640929.png)
 
-**4. После выбираем очистка**
+**5. После выбираем очистка**
 
 ![image](https://user-images.githubusercontent.com/49199507/157941744-86024e3c-52f0-4122-a0ba-e4cc397579cf.png)
 
